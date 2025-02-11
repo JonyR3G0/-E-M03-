@@ -24,11 +24,13 @@
 | # de clase | Fecha      |                                         Tema                                          |
 | ---------- | ---------- | :-----------------------------------------------------------------------------------: |
 | Clase #0   | 04-02-2025 | Introduccion a JS:Historia, introducción, ejemplos de codigo, re-conociendo al equipo |
+| Clase #1   | 06-02-2025 |                        Tipos de variables, informacion y datos                        |
 
 ## 🗺️ Roadmap tareas y pendientes
 
-| # de clase | Tarea                             | Plan | Status  |
-| ---------- | --------------------------------- | ---- | ------- |
-| Clase #0   | Crear repo y subirlo: programa JS | -    | PENDING |
+| # de clase | Tarea                                                                            | Plan | Status |
+| ---------- | -------------------------------------------------------------------------------- | ---- | ------ |
+| Clase #0   | Crear repo y subirlo: programa JS                                                | -    | DONE   |
+| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples |      | DONE   |
 
 ## 🔍 Retos y soluciones
