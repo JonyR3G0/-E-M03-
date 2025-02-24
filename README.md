@@ -39,4 +39,4 @@
 | Clase #2   | Crear un algoritmo que cuente los abjetos de un array                            |      | DONE   |
 
 ## 🔍 Retos y soluciones
-En el entregable de arrays --> ![Imagen de codigo fallido](https://raw.githubusercontent.com/JonyR3G0/-E-M03-/refs/heads/main/resources/IMG/image.png)
+En el entregable de arrays (rompe el programa) --> ![Imagen de codigo fallido](https://raw.githubusercontent.com/JonyR3G0/-E-M03-/refs/heads/main/resources/IMG/image.png)
