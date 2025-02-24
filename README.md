@@ -25,6 +25,10 @@
 | ---------- | ---------- | :-----------------------------------------------------------------------------------: |
 | Clase #0   | 04-02-2025 | Introduccion a JS:Historia, introducción, ejemplos de codigo, re-conociendo al equipo |
 | Clase #1   | 06-02-2025 |                        Tipos de variables, informacion y datos                        |
+| Clase #2   | 11-2-2025  |                              Ciclos While, For y Arrays                               |
+| Clase #3   | 13-2-2025  |                                    Funciones en JS                                    |
+| Clase #4   | 18-2-2025  |                                     Objetos en JS                                     |
+| Clase #5   | 20-2-2025  |                  Intro al DOM en JS y repaso de los temas anteriores                  |
 
 ## 🗺️ Roadmap tareas y pendientes
 
@@ -32,5 +36,6 @@
 | ---------- | -------------------------------------------------------------------------------- | ---- | ------ |
 | Clase #0   | Crear repo y subirlo: programa JS                                                | -    | DONE   |
 | Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples |      | DONE   |
+| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                            |      | DONE   |
 
 ## 🔍 Retos y soluciones
