@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Funciones</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>📖 La biblioteca de Jonh 📖</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Agregar libro</h2>
+        <input type="text" id="librosInput" size="50" spellcheck="true" />
+        <button id="agregarBttn" class="agregarBttn">Agregar</button>
+      </div>
+      <div class="card">
+        <h2>Lista de libros</h2>
+        <div><ol id="librosOutput"></ul></div>
+      </div>
+    </main>
+    <footer></footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

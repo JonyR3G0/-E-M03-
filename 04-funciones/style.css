@@ -1,0 +1,40 @@
+/* De lo general a lo especifico */
+
+body {
+    background-color: #1E201E;
+    color: #ECDFCC;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+    border: 0.1rem, solid, #ECDFCC;
+    border-radius: 1rem;
+}
+
+main{
+    display: flex;
+    align-items:baseline;
+    justify-content: space-around;
+}
+.card{
+    padding: .5rem;
+    border: 0.1rem, solid, #ECDFCC;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+}
+.agregarBttn {
+    cursor: pointer;
+    color: #ECDFCC;
+    background-color: #697565;
+    border: none;
+}
+input{
+    background-color: #1E201E;
+    color: #ECDFCC;
+    border: .2rem, solid, #697565;
+}

@@ -1,5 +1,8 @@
-//declarar funcion
+// Instrucciones para resolver el problema:
+// Define una función `agregarLibro(titulo)`, que añada un libro a un array llamado `librosLeidos`.
+// Define una función `mostrarLibrosLeidos()`, que imprima todos los libros que has leído
 
+// -------------> CALCULADORA DE SUMAS <-----------------
 // let dat1 = Number(prompt('num1'))
 // let dat2 = Number(prompt('num2'))
 
@@ -11,25 +14,33 @@
 
 // alert(suma (dat1,dat2))
 
-//Que es hoisting && que es el scope???
+//-------------> Calculadora de sumas *ENDS* <---------------
 
-let librosLeidos = []
+//Capturo elementos del DOM
+const librosOutput = document.querySelector("#librosOutput");
+const librosInput = document.querySelector("#librosInput");
+const agregarBttn = document.querySelector("#agregarBttn");
 
-let libroNuevo = prompt("Agrega libros a tu lista")
+//Creo un array vacio
+let librosLeidos = [];
 
-while ( libroNuevo != null ) {
-    librosLeidos.push(libroNuevo)
-    libroNuevo = prompt("Agrega libros a tu lista")
+//Lee el value del input librosInput, hace un push al array y llama a la funcion mostrarLibrosLeidos
+function agregarLibro() {
+    if (librosInput.value === '') {
+        alert("Por favor, no introduzca campos vacios");
+    }
+    else {
+        let libroNuevo = librosInput.value;
+        librosLeidos.push(libroNuevo);
+        librosInput.value = "";
+        mostrarLibrosLeidos();
+    }
 }
 
-function agregarLibro (libro) {
-    librosLeidos.push(libro)
-    return libro
-    mostrarLibrosLeidos(librosLeidos)
+function mostrarLibrosLeidos() {
+    const librosFormateado = `<li>${librosLeidos[librosLeidos.length - 1]}</li>`;
+    librosOutput.innerHTML += librosFormateado;
 }
 
-function mostrarLibrosLeidos (array) {
-    for (let i = 0; i < array.length; i++) {
-        console.log(array[i])      
-    }    
-}
+//Event listener que llama a la funcion agregar libro
+agregarBttn.addEventListener("click", agregarLibro);
