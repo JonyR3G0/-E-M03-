@@ -32,11 +32,13 @@
 
 ## 🗺️ Roadmap tareas y pendientes
 
-| # de clase | Tarea                                                                            | Plan | Status |
-| ---------- | -------------------------------------------------------------------------------- | ---- | ------ |
-| Clase #0   | Crear repo y subirlo: programa JS                                                | -    | DONE   |
-| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples |      | DONE   |
-| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                            |      | DONE   |
+| # de clase | Tarea                                                                            | Plan                                                    | Status |
+| ---------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- | ------ |
+| Clase #0   | Crear repo y subirlo: programa JS                                                | -                                                       | DONE   |
+| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples |                                                         | DONE   |
+| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                            |                                                         | DONE   |
+| Clase #3   | Crear 2 funciones, una que almacene libros en un array y otra que los despliege  | (Hice una pequeña interface para integrarlo con el DOM) | DONE   |
 
 ## 🔍 Retos y soluciones
+
 En el entregable de arrays (rompe el programa) --> ![Imagen de codigo fallido](https://raw.githubusercontent.com/JonyR3G0/-E-M03-/refs/heads/main/resources/IMG/image.png)
