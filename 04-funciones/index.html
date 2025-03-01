@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Funciones</title>
   </head>
+
   <body>
     <header>
       <h1>📖 La biblioteca de Jonh 📖</h1>
@@ -13,12 +14,16 @@
     <main>
       <div class="card">
         <h2>Agregar libro</h2>
-        <input type="text" id="librosInput" size="50" spellcheck="true" />
-        <button id="agregarBttn" class="agregarBttn">Agregar</button>
+        <form>
+          <input type="text" id="librosInput" size="50" spellcheck="true" />
+          <button id="agregarBttn" class="agregarBttn">Agregar</button>
+        </form>
       </div>
       <div class="card">
         <h2>Lista de libros</h2>
-        <div><ol id="librosOutput"></ul></div>
+        <div>
+          <ol id="librosOutput"></ol>
+        </div>
       </div>
     </main>
     <footer></footer>

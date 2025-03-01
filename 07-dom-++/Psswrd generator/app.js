@@ -48,12 +48,12 @@ const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const utils = {
     generateRandomBetween: function (min, max) {
 
-        //el metodo Math.random, genera un numero decimal aleatorio del 0 - 1, tambioen si hacemos un Math.random()*numero devuelve en ese rango.
+        //el metodo Math.random, genera un numero decimal aleatorio del 0 - 1, tambien si hacemos un Math.random()*numero devuelve en ese rango.
         //metodo Math.round redondea todo lo que este entre parentesis, hay tambien un floor que devuelve hacia abajo
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
     getCharsFromArray: function (array, num) {
-        //una vacia que de va a untrir del return
+        //un string vacio que se va a untrir del return
         let chars = ""
         //Da vueltas la cantidad de veces num
         for (let i = 0; i < num; i++) {
@@ -137,4 +137,3 @@ generateButton.addEventListener("click", generatePassword)
 
 //captura copy del copy
 copyButton.addEventListener('click', copyToClip)
-
