@@ -32,12 +32,13 @@
 
 ## 🗺️ Roadmap tareas y pendientes
 
-| # de clase | Tarea                                                                            | Plan                                                    | Status |
-| ---------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- | ------ |
-| Clase #0   | Crear repo y subirlo: programa JS                                                | -                                                       | DONE   |
-| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples |                                                         | DONE   |
-| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                            |                                                         | DONE   |
-| Clase #3   | Crear 2 funciones, una que almacene libros en un array y otra que los despliege  | (Hice una pequeña interface para integrarlo con el DOM) | DONE   |
+| # de clase | Tarea                                                                                                                                 | Plan                                                    | Status |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------ |
+| Clase #0   | Crear repo y subirlo: programa JS                                                                                                     | -                                                       | DONE   |
+| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples                                                      |                                                         | DONE   |
+| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                                                                                 |                                                         | DONE   |
+| Clase #3   | Crear 2 funciones, una que almacene libros en un array y otra que los despliege                                                       | (Hice una pequeña interface para integrarlo con el DOM) | DONE   |
+| Clase #4   | Crear un objeto llamado libro con metodos para describir el estado del mismo y unos metodos extra para manejar la lista de capitulos. |                                                         | DONE   |
 
 ## 🔍 Retos y soluciones
 
