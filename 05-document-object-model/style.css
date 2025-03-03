@@ -1,0 +1,52 @@
+:root{
+    --colorPrimario:#2E2B2B;
+    --colorSecundario:#388186;
+    --colorTerciario:#FDF6F6;
+    --colorCuaternario:#A5E9E1;
+}
+body{
+    background-color: var(--colorPrimario);
+    color: var(--colorCuaternario);
+}
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure{
+    margin-bottom: 0;
+}
+img{
+    border-radius: 2rem;
+    border: 1rem, solid, var(--colorCuaternario);
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    list-style: none;
+    padding: 0;
+}
+li{
+    width: 500px;
+    border: 1rem, solid, var(--colorSecundario);
+    background-color: var(--colorSecundario);
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow-wrap: break-word;
+}
+
+form{
+    background-color: var(--colorCuaternario);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 500px;
+}

@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM | Comentarios</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-    <p id="txt">Hola mundo</p>
-    <button type="button" onclick="cambiarTXT()">Cambiar texto</button>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>¿Qué opinas de la siguiente foto:?</h1>
+      <figure id="figure">
 
-    <section>
-        <h1>Lista</h1>
-        <ul>
-            <li>elemento</li>
-            <li>elemento</li>
-            <li>elemento</li>
-            <li>elemento</li>
-            <li>elemento</li>
-            <li>elemento</li>
+      </figure>
+
+      <div>
+        <ul id="comentarios">
+
         </ul>
-    </section>
+      </div>
 
-    <section class="cajacomentarios">
-        <form action="">
-            <input type="text" id="inputComentario">
-            <button>Comentar</button>
+      <section class="cajacomentarios">
+        <form>
+          <input type="text" id="inputComentario" />
+          <button>Comentar</button>
+          <button>Eliminar comentario</button>
         </form>
-        <div class="comentarios">
-            
-        </div>
-    </section>
-    <script src="./script.js"></script>
+      </section>
+    </main>
 
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
