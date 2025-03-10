@@ -7,14 +7,12 @@
 const charLength = document.querySelector("#charLength")
 const lengthRange = document.querySelector("#lengthRange")
 
-//funcion anonima, es una funcion que no tiene nombre, ademas se ejecuta dentro de este parentesis y nadie la conoce.
+// 🐛 Fix del primer bug: Cuando cargabas la pagina aparecia en 0 el charLenght (aunque el minimo esta en 5) hasta que movieras la barra. asi que leemos el contenido de lenghtRange la primera vez.
+charLength.textContent = lengthRange.value
 
-//POINTER EVENT (e) (investigar)
-
-lengthRange.addEventListener("change", function (e) {
+lengthRange.addEventListener("input", function (e) {
 
     //pasamos el valor de la barra, que se setea en el html
-
     charLength.textContent = e.currentTarget.value
 })
 

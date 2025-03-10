@@ -29,17 +29,21 @@
 | Clase #3   | 13-2-2025  |                                    Funciones en JS                                    |
 | Clase #4   | 18-2-2025  |                                     Objetos en JS                                     |
 | Clase #5   | 20-2-2025  |                  Intro al DOM en JS y repaso de los temas anteriores                  |
+| Clase #6   | 25-2-2025  |                              DOM (Generador de psswrds)                               |
+| Clase #7   | 27-2-2025  |                    Revision de temas del modulo/ayuda con proyecto                    |
 
 ## 🗺️ Roadmap tareas y pendientes
 
-| # de clase | Tarea                                                                                                                                 | Plan                                                                                                                   | Status |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------ |
-| Clase #0   | Crear repo y subirlo: programa JS                                                                                                     | -                                                                                                                      | DONE   |
-| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples                                                      |                                                                                                                        | DONE   |
-| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                                                                                 |                                                                                                                        | DONE   |
-| Clase #3   | Crear 2 funciones, una que almacene libros en un array y otra que los despliege                                                       | (Hice una pequeña interface para integrarlo con el DOM)                                                                | DONE   |
-| Clase #4   | Crear un objeto llamado libro con metodos para describir el estado del mismo y unos metodos extra para manejar la lista de capitulos. |                                                                                                                        | DONE   |
-| Clase #5   | Crear una app de comentarios que incluya la fecha de envio, que se puedan eliminar comentarios e interactue con el DOM                | (Hice una interface que carga una imagen aleatora de loremPicsum al generar un id aleatorio con el metodo MATH.RANDOM) | DONE   |
+| # de clase | Tarea                                                                                                                                 | Plan                                                                                                                   | Status  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- |
+| Clase #0   | Crear repo y subirlo: programa JS                                                                                                     | -                                                                                                                      | DONE    |
+| Clase #1   | Crear un script en JS que asigne calificacions a partir de condicionales simples                                                      |                                                                                                                        | DONE    |
+| Clase #2   | Crear un algoritmo que cuente los abjetos de un array                                                                                 |                                                                                                                        | DONE    |
+| Clase #3   | Crear 2 funciones, una que almacene libros en un array y otra que los despliege                                                       | (Hice una pequeña interface para integrarlo con el DOM)                                                                | DONE    |
+| Clase #4   | Crear un objeto llamado libro con metodos para describir el estado del mismo y unos metodos extra para manejar la lista de capitulos. |                                                                                                                        | DONE    |
+| Clase #5   | Crear una app de comentarios que incluya la fecha de envio, que se puedan eliminar comentarios e interactue con el DOM                | (Hice una interface que carga una imagen aleatora de loremPicsum al generar un id aleatorio con el metodo MATH.RANDOM) | DONE    |
+| Clase #6   | Entregar el generador de Passwords                                                                                                    | -                                                                                                                      | PENDING |
+| Clase #7   | Entregar proyecto finar (Una pagina de comentarios para libros)                                                                       | -                                                                                                                      | PENING  |
 
 ## 🔍 Retos y soluciones
 
