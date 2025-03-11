@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Generador de Contraseñas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h2>🔑 Creador de contras 🥷</h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+        <div class="oculto container">
+            <h2>¡Copiado! ✅</h2>
+            <p>Ahora estas protegido con la mejor "segurosidad", tomaría una computadora cuantica para descifrar tu contraseña, pero no creo que lo intenten contigo ദ്ദി ˉ͈̀꒳ˉ͈́ )✧.</p>
+        </div>
+      <div class="container">
+        <h2 class="catchy-titulo">
+          ClaveRándom2000 <br />
+          ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
+        </h2>
         <div class="output-container">
-            <input type="text" id="passwordOutput" readonly>
-            <button id="copyButton">📋</button>
+          <input type="text" id="passwordOutput" readonly />
+          <button id="copyButton">📋</button>
         </div>
         <div class="controls">
-            <label for="lengthRange">Caracteres:</label>
-            <input type="range" id="lengthRange" min="5" max="30" value="5">
-            <span><span id="charLength">0</span></span>
-            <div class="options">
-                <label><input type="checkbox" id="numbers"> Incluir Numeros</label>
-                <label><input type="checkbox" id="symbols"> Incluir Simbolos</label>
-                <label><input type="checkbox" id="kanas"> Incluir Kanas</label>
-            </div>
-            <div class="strength">
-                <span>STRENGTH</span>
-                <meter id="strengthIndicator" min="0" max="100" low="30" high="75" optimum="100" value="75" min="0" max="100"></meter>
-            </div>
-            <button id="generateButton">Generar 🪄</button>
+          <label for="lengthRange">Caracteres:</label>
+          <input type="range" id="lengthRange" min="5" max="30" value="5" />
+          <span><span id="charLength">0</span></span>
+          <div class="options">
+            <label
+              ><input type="checkbox" id="numbers" /> Incluir Numeros</label
+            >
+            <label
+              ><input type="checkbox" id="symbols" /> Incluir Simbolos</label
+            >
+            <label><input type="checkbox" id="kanas" /> Incluir Kanas</label>
+          </div>
+          <div class="strength">
+            <span>"Segurosidad ☝️🤓"</span>
+            <meter
+              id="strengthIndicator"
+              min="0"
+              max="100"
+              low="30"
+              high="75"
+              optimum="100"
+              value="2"
+              min="0"
+              max="100"
+            ></meter>
+          </div>
+          <button id="generateButton">Generar 🪄</button>
         </div>
-    </div>
-
+      </div>
+    </main>
 
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>

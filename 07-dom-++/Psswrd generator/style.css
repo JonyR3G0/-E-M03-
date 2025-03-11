@@ -1,67 +1,162 @@
+/* De lo general a lo especifico */
+
+:root {
+  /* 1 Background, 
+    1 para la card
+    2 para elementos que resalten 
+    3 para el output
+    4 para los bordes o detalles
+    5 para el texto */
+  --color-1: #000000;
+  --color-2: #151e39;
+  --color-3: #FF69EB;
+  --color-4: #dcd8d8;
+  --color-5: #ffffff;
+  --color-6: #2454ff;
+}
+
+/* Font st */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+/* Font end */
+
+* {
+  font-family: "Space Mono", Arial, Helvetica, sans-serif;
+}
+
 body {
-    background-color: #0d0d0d;
-    color: #cfcfcf;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  background-color: var(--color-1);
+  color: #cfcfcf;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 .container {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
+  background-color: var(--color-2);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+.copiadoVisible{
+    z-index: 1000;
+    position: absolute;
+    background-color: var(--color-5);
+    color: var(--color-3);
+    height: 362px;
 }
 .output-container {
-    display: flex;
-    align-items: center;
-    background-color: #2a2a2a;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-3);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 #passwordOutput {
-    flex-grow: 1;
-    background: none;
-    border: none;
-    color: #cfcfcf;
-    font-size: 1.2em;
-    text-align: center;
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: var(--color-5);
+  font-size: 1.2em;
+  text-align: center;
 }
 #copyButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4caf50;
-    font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-3);
+  font-size: 1.2em;
 }
 .controls {
-    text-align: left;
+  text-align: left;
 }
 .options label {
-    display: block;
-    margin: 5px 0;
+  display: block;
+  margin: 5px 0;
 }
 .strength {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-style: italic;
 }
 #strengthIndicator {
-    font-size: 1.2em;
+
+  font-size: 1.2em;
 }
+
 #generateButton {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-4);
+  border: none;
+  border-radius: 5px;
+  color: var(--color-2);
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.1s ease;
+}
+
+#generateButton:hover{
+    transform: scale(106%);
+    background-color: var(--color-3);
+    color: var(--color-5);
+}
+
+#generateButton:active{
+    transform: scale(100%);
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.catchy-titulo {
+  animation: cambiarColor .5s infinite;
+}
+
+.oculto{
+    display: none;
+}
+
+@keyframes cambiarColor {
+  0% {
+    color: var(--color-3);
+  }
+  50% {
+    color: var(--color-5);
+    font-style: italic;
+
+  }
+  100% {
+    color: var(--color-3);
+  }
 }
