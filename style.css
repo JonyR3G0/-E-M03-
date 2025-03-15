@@ -27,14 +27,18 @@
 * {
   font-family: "Kode Mono", Arial, Helvetica, sans-serif;
   scrollbar-color: var(--color-6) var(--color-2);
+  scroll-behavior: smooth;
+  animation: scroll-behavior 10s ease-in-out;
 }
 
 body {
   background-color: var(--color-1);
   color: var(--color-5);
+  margin: 0;
 }
 
 .hero {
+  opacity: 100%;
   position: sticky;
   align-content: center;
   text-align: center;
@@ -45,10 +49,22 @@ body {
   font-size: 5rem;
 }
 
+.navBar {
+  background-color: var(--color-2);
+  display: flex;
+  margin: none;
+  border-radius: 1rem;
+}
+
+.navBar h1 {
+  margin: 0;
+  padding: 1rem;
+}
+
 .codeHero {
   color: var(--color-6);
   font-style: italic;
-  animation: heroAnimation 3s infinite;
+  animation: heroAnimation 15s infinite;
 }
 
 .codeHeroII {
@@ -56,9 +72,37 @@ body {
   font-style: bold;
 }
 
-.moreHero {
+.HEROPOWER {
+  position: absolute;
+  top: 60vh;
+  left: 45vw;
+  user-select: none;
   cursor: pointer;
   font-size: 5rem;
+  animation: HEROPOWER 2s infinite;
+}
+
+.HEROPOWER:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s;
+}
+
+.HEROPOWER:not(:hover) {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.HEROPOWER:active {
+  filter: saturate(20);
+  transform: scale(1.2);
+}
+
+.invisible {
+  display: none;
+}
+
+.hero, .navBar {
+  transition: all 0.3s ease-in-out; /* Transición suave en todas las propiedades */
 }
 
 @keyframes heroAnimation {
@@ -89,5 +133,17 @@ body {
   }
   100% {
     color: var(--animColor-1);
+  }
+}
+
+@keyframes HEROPOWER {
+  0% {
+    color: var(--color-3);
+  }
+  50% {
+    color: var(--color-4);
+  }
+  100% {
+    color: var(--color-3);
   }
 }
