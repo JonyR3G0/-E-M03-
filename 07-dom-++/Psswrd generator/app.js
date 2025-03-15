@@ -40,28 +40,36 @@ function main () {
     
     // 4 crear un objeto utils para hacer las funciones que generen los numeros aleatorios
     const utils = {
-        //un utils es un scafold (distribucion de carpetas) generalmente utils metemos funciones que tenienen tareas muy especificas, y pequenitas.
+        //un utils es un scafold (distribucion de carpetas) generalmente utils metemos
+        //funciones que tienen tareas muy especificas, y pequenitas.
+
+        //Crea un numero aleatorio
         generateRandomBetween: function (min, max) {
     
-            //el metodo Math.random, genera un numero decimal aleatorio del 0 - 1, tambien si hacemos un Math.random()*numero devuelve en ese rango.
-            //metodo Math.round redondea todo lo que este entre parentesis, hay tambien un floor que devuelve hacia abajo
+            //el metodo Math.random, genera un numero decimal aleatorio del 0 - 1, tambien si hacemos un
+            // Math.random()*numero devuelve en ese rango.
+            //metodo Math.round redondea hacia arriba todo lo que este entre parentesis, hay tambien un floor que
+            //redondea hacia abajo
+
             return Math.floor(Math.random() * (max - min + 1) + min)
         },
-        getCharsFromArray: function (array, num) {
-            //un string vacio que se va a untrir del return
-            let chars = ""
+        getCharsFromArray: function (array, posicionAleatoria) {
+        
+            //El string vacio, en el que vamos a almacenar teemporalmente la contrasena
+            let caracteresAleatorios = ""
+
             //Da vueltas la cantidad de veces num
-            for (let i = 0; i < num; i++) {
+            for (let i = 0; i < posicionAleatoria; i++) {
                 //numero random lo guardamos
                 const randomNumber = this.generateRandomBetween(0, array.length - 1)
                 //vamos formando el char seleccionando la posicion del array dictado por el numero variable. (-1 para no retornar null)
                 if (typeof array[randomNumber] === "string") {
-                    randomNumber % 2 === 0 ? chars += array[randomNumber].toLowerCase() : chars += array[randomNumber].toUpperCase()
+                    randomNumber % 2 === 0 ? caracteresAleatorios += array[randomNumber].toLowerCase() : caracteresAleatorios += array[randomNumber].toUpperCase()
                     //OPERADOR TERNARIO es una condicional, es un if else condensado concretamente a que pasa si, y que pasa si no. es un if else comprimido para economizar sintaxys
                 }
-                else {chars += array[randomNumber]}
+                else {caracteresAleatorios += array[randomNumber]}
             }
-            return chars
+            return caracteresAleatorios
         }
     }
     
@@ -101,7 +109,7 @@ function main () {
         //agregamos letras
         //8 aniadir letras a temp Passs
         tempPass += utils.getCharsFromArray(letras, passLength - tempPass.length)
-    
+        
         //9 randomizamos los que ya tenemos 
         console.log(tempPass.split('').sort(() => Math.random() - 0.5).join(''))
         //metodos que vamos a usar el string --> split(),(arrays) sort() join
