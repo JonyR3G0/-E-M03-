@@ -1,0 +1,93 @@
+/* De lo general a lo especifico */
+
+:root {
+  /* Paleta de colores para la pagina en general */
+  /* 1 Background, 
+      1 para la card
+      2 para elementos que resalten 
+      3 para el output
+      4 para los bordes o detalles
+      5 para el texto */
+  --color-1: #000000;
+  --color-2: #151e39;
+  --color-3: #8789c0;
+  --color-4: #45f0df;
+  --color-5: #ffffff;
+  --color-6: #2454ff;
+  /* ENDS */
+  /* Paleta de colores para la animacion del hero */
+  --animColor-1: #ff00c1;
+  --animColor-2: #9600ff;
+  --animColor-3: #4900ff;
+  --animColor-4: #00b8ff;
+  --animColor-5: #00fff9;
+  /* ENDS */
+}
+
+* {
+  font-family: "Kode Mono", Arial, Helvetica, sans-serif;
+  scrollbar-color: var(--color-6) var(--color-2);
+}
+
+body {
+  background-color: var(--color-1);
+  color: var(--color-5);
+}
+
+.hero {
+  position: sticky;
+  align-content: center;
+  text-align: center;
+  height: 90vh;
+}
+
+.hero h1 {
+  font-size: 5rem;
+}
+
+.codeHero {
+  color: var(--color-6);
+  font-style: italic;
+  animation: heroAnimation 3s infinite;
+}
+
+.codeHeroII {
+  color: var(--color-4);
+  font-style: bold;
+}
+
+.moreHero {
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+@keyframes heroAnimation {
+  0% {
+    /* 100% ÷ 9 = 11.11% */
+    color: var(--animColor-1);
+  }
+  22.22% {
+    color: var(--animColor-2);
+  }
+  33.33% {
+    color: var(--animColor-3);
+  }
+  44.44% {
+    color: var(--animColor-4);
+  }
+  55.55% {
+    color: var(--animColor-5);
+  }
+  66.66% {
+    color: var(--animColor-4);
+  }
+  77.77% {
+    color: var(--animColor-3);
+  }
+  88.88% {
+    color: var(--animColor-2);
+  }
+  100% {
+    color: var(--animColor-1);
+  }
+}
