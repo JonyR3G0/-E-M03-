@@ -37,26 +37,37 @@ body {
   margin: 0;
 }
 
-.hero {
+/* .hero {
   opacity: 100%;
-  position: sticky;
+  z-index: 1000;
+  background-color: var(--color-1);
+  position: absolute;
+  top: 0;
+  left: auto;
   align-content: center;
   text-align: center;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
+  animation: HEROLoad 4s 1;
 }
 
 .hero h1 {
   font-size: 5rem;
-}
+} */
 
 .navBar {
-  background-color: var(--color-2);
+  position: sticky;
+  top: 1rem;
+  background-color: var(--color-1);
+  border: 0.2rem solid var(--color-2);
   display: flex;
-  margin: none;
+  margin: 0.75rem;
   border-radius: 1rem;
+  /* animation: HEROLoad 3s 1; */
 }
 
 .navBar h1 {
+  font-size: 1rem;
   margin: 0;
   padding: 1rem;
 }
@@ -64,7 +75,7 @@ body {
 .codeHero {
   color: var(--color-6);
   font-style: italic;
-  animation: heroAnimation 15s infinite;
+  /* animation: heroAnimation 4s infinite; */
 }
 
 .codeHeroII {
@@ -101,7 +112,8 @@ body {
   display: none;
 }
 
-.hero, .navBar {
+.hero,
+.navBar {
   transition: all 0.3s ease-in-out; /* Transición suave en todas las propiedades */
 }
 
@@ -145,5 +157,23 @@ body {
   }
   100% {
     color: var(--color-3);
+  }
+}
+
+@keyframes HEROLoad {
+  0% {
+    border-color: var(--color-1);
+    width: 10vw;
+    transform: translateY(50%);
+    transform: translateX(40vw);
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    width: 100vw;
+    border-color: var(--color-2);
+    font-size: 1rem;
   }
 }
