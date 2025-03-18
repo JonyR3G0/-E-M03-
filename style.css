@@ -13,7 +13,7 @@
   --color-3: #8789c0;
   --color-4: #45f0df;
   --color-5: #ffffff;
-  --color-6: #2454ff;
+  --color-6: #ff00c1;
   /* ENDS */
   /* Paleta de colores para la animacion del hero */
   --animColor-1: #ff00c1;
@@ -24,11 +24,19 @@
   /* ENDS */
 }
 
+/* ======================================> GENERAL STYLES <========================================= */
+
 * {
   font-family: "Kode Mono", Arial, Helvetica, sans-serif;
   scrollbar-color: var(--color-6) var(--color-2);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  timeline-scope: --section, --main, --site-header;
   scroll-behavior: smooth;
-  animation: scroll-behavior 10s ease-in-out;
 }
 
 body {
@@ -37,18 +45,21 @@ body {
   margin: 0;
 }
 
-/* .hero {
-  opacity: 100%;
+a {
+  color: var(--color-6);
+}
+
+/* ======================================> GENERAL STYLES ENDS <========================================= */
+
+/* ===================================> HERO STYLES <=========================== */
+
+.hero {
   z-index: 1000;
-  background-color: var(--color-1);
-  position: absolute;
-  top: 0;
-  left: auto;
   align-content: center;
   text-align: center;
-  width: 100%;
-  height: 100vh;
-  animation: HEROLoad 4s 1;
+  height: 100dvh;
+  user-select: none;
+  background-color: var(--color-1);
 }
 
 .hero h1 {
@@ -72,10 +83,15 @@ body {
   padding: 1rem;
 }
 
+.hero h2 {
+  color: var(--color-2);
+}
+
 .codeHero {
   color: var(--color-6);
+  font-family: "Space mono";
   font-style: italic;
-  /* animation: heroAnimation 4s infinite; */
+  animation: heroAnimation 6s infinite;
 }
 
 .codeHeroII {
@@ -83,97 +99,149 @@ body {
   font-style: bold;
 }
 
-.HEROPOWER {
+.moreHero {
+  color: var(--color-2);
   position: absolute;
-  top: 60vh;
-  left: 45vw;
-  user-select: none;
+  left: 47dvw;
+  bottom: 20dvh;
   cursor: pointer;
   font-size: 5rem;
-  animation: HEROPOWER 2s infinite;
+  transition: all 0.5s ease-in-out;
+  animation: blurTouchMe 4s infinite;
 }
 
-.HEROPOWER:hover {
-  transform: scale(1.3);
-  transition: transform 0.2s;
+.moreHero:hover {
+  color: var(--color-5);
+  transform: scale(1.1);
 }
 
-.HEROPOWER:not(:hover) {
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.HEROPOWER:active {
-  filter: saturate(20);
-  transform: scale(1.2);
-}
-
-.invisible {
-  display: none;
-}
-
-.hero,
-.navBar {
-  transition: all 0.3s ease-in-out; /* Transición suave en todas las propiedades */
+@keyframes blurTouchMe {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes heroAnimation {
   0% {
-    /* 100% ÷ 9 = 11.11% */
     color: var(--animColor-1);
   }
-  22.22% {
-    color: var(--animColor-2);
-  }
-  33.33% {
+  25% {
     color: var(--animColor-3);
   }
-  44.44% {
-    color: var(--animColor-4);
-  }
-  55.55% {
-    color: var(--animColor-5);
-  }
-  66.66% {
-    color: var(--animColor-4);
-  }
-  77.77% {
-    color: var(--animColor-3);
-  }
-  88.88% {
-    color: var(--animColor-2);
-  }
-  100% {
-    color: var(--animColor-1);
-  }
-}
-
-@keyframes HEROPOWER {
-  0% {
-    color: var(--color-3);
-  }
   50% {
-    color: var(--color-4);
-  }
-  100% {
-    color: var(--color-3);
-  }
-}
-
-@keyframes HEROLoad {
-  0% {
-    border-color: var(--color-1);
-    width: 10vw;
-    transform: translateY(50%);
-    transform: translateX(40vw);
-  }
-  50% {
+    color: var(--animColor-4);
   }
   75% {
+    color: var(--animColor-3);
   }
   100% {
-    width: 100vw;
-    border-color: var(--color-2);
-    font-size: 1rem;
+    color: var(--animColor-1);
   }
 }
+
+/* ===================================> HERO STYLES ENDS <=========================== */
+
+/* =====================================> NavBar STARTS <==================================== */
+.navBar {
+  z-index: 900;
+  position: sticky;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2rem;
+}
+/* =====================================> NavBar ENDS <==================================== */
+/* =======================================> Sections & contents STARTS <================================== */
+
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  view-timeline: --section;
+  height: 100dvh;
+}
+
+.content {
+  /* Fix the content, so it doesn't scroll with the section */
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  padding: 5rem 3rem;
+
+  /* Animate the content based on the section scrolling */
+  --contrast: 4;
+  --blur: 1rem;
+
+  animation: blink ease-in-out both;
+  animation-timeline: --section;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    filter: blur(var(--blur)) contrast(var(--contrast));
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    filter: blur(0) contrast(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* =======================================> Sections & contents ENDS <================================== */
+
+/* ===================================> FOOTER STYLES <============================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-6);
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.navFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer h3 {
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  color: var(--color-1);
+}
+
+.navFooter a {
+  background-color: var(--color-2);
+  color: var(--color-5);
+  padding: 0.3rem;
+  margin: 1rem 0.5rem 0 0.5rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.navFooter a:hover {
+  transform: scale(1.1);
+}
+
+.navFooter a:active {
+  transform: scale(1);
+}
+
+/* ===================================> FOOTER STYLES ENDS <============================== */
