@@ -64,17 +64,6 @@ a {
 
 .hero h1 {
   font-size: 5rem;
-} */
-
-.navBar {
-  position: sticky;
-  top: 1rem;
-  background-color: var(--color-1);
-  border: 0.2rem solid var(--color-2);
-  display: flex;
-  margin: 0.75rem;
-  border-radius: 1rem;
-  /* animation: HEROLoad 3s 1; */
 }
 
 .navBar h1 {
@@ -102,8 +91,9 @@ a {
 .moreHero {
   color: var(--color-2);
   position: absolute;
-  left: 47dvw;
+  left: 50dvw;
   bottom: 20dvh;
+  transform: translate(-50%, -50%);
   cursor: pointer;
   font-size: 5rem;
   transition: all 0.5s ease-in-out;
@@ -112,7 +102,6 @@ a {
 
 .moreHero:hover {
   color: var(--color-5);
-  transform: scale(1.1);
 }
 
 @keyframes blurTouchMe {
@@ -160,6 +149,81 @@ a {
 /* =====================================> NavBar ENDS <==================================== */
 /* =======================================> Sections & contents STARTS <================================== */
 
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectTitle {
+  background-color: var(--color-4);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 1rem;
+  color: var(--color-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectTitleR {
+  display: flex;
+}
+
+.reaction {
+  margin-right: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.love {
+  transition: all 0.2s;
+  &.love:hover {
+    color: var(--color-6);
+  }
+}
+
+.dislike {
+  transition: all 0.2s;
+  &.dislike:hover {
+    color: var(--animColor-3);
+  }
+}
+
+.contentContainer {
+  display: flex;
+  background: linear-gradient(150deg, rgb(0, 0, 14), rgb(0, 23, 23));
+  background-size: 200% 200%;
+  animation: containerGradientAnimation 15s infinite;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projectMain {
+  flex: 2;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-4) transparent;
+}
+
+.projectComments {
+  flex: 1;
+  background-color: var(--color-2);
+  height: 50dvh;
+  background: rgba(9, 120, 132, 0.2); /* Fondo semitransparente */
+  box-shadow: 0 4px 30px rgba(41, 83, 95, 0.227); /* Sombra suave */
+  backdrop-filter: blur(5rem); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(5rem); /* Compatibilidad con Safari */
+  border-bottom-right-radius: 1rem;
+  height: 100%;
+  padding: 1rem;
+}
+
 .section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -172,7 +236,7 @@ a {
   overflow: hidden;
   position: fixed;
   inset: 0;
-  padding: 5rem 3rem;
+  padding: 7rem 4rem 4rem 5rem;
 
   /* Animate the content based on the section scrolling */
   --contrast: 4;
@@ -180,6 +244,18 @@ a {
 
   animation: blink ease-in-out both;
   animation-timeline: --section;
+}
+
+@keyframes containerGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes blink {
