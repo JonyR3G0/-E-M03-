@@ -59,11 +59,9 @@ a {
   text-align: center;
   height: 100dvh;
   user-select: none;
-  background-image: 
-  linear-gradient(to top, rgba(0, 0, 0, 0.704), rgb(0, 0, 0)),
-  url(./resources/IMG/hero.png);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.704), rgb(0, 0, 0)),
+    url(./resources/IMG/hero.png);
   background-color: var(--color-1);
-
 }
 
 .hero h1 {
@@ -94,10 +92,11 @@ a {
 
 .moreHero {
   color: var(--color-2);
-  position: absolute;
+  padding: 1rem;
+  /* position: absolute;
   left: 50dvw;
   bottom: 20dvh;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   cursor: pointer;
   font-size: 5rem;
   transition: all 0.5s ease-in-out;
@@ -278,6 +277,75 @@ a {
 }
 /* =======================================> Sections & contents ENDS <================================== */
 
+/* ==============================> COMMENTS STARTS <========================================== */
+.comentariosTitle {
+  position: absolute;
+  background-color: rgba(144, 10, 81, 0.8);
+  backdrop-filter: blur(0.1rem);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.cajaComentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  height: 100%;
+}
+
+.cajaComentarios form {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.cajaComentarios input {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.commentButton {
+  background-color: var(--color-6);
+  color: var(--color-5);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.commentButton:hover {
+  transform: scale(1.1);
+}
+
+.commentButton:active {
+  transform: scale(1);
+}
+
+#listaComentarios {
+  overflow-y: scroll;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.comentario{
+  background-color: var(--color-6);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.borrar{
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ==============================> COMMENTS ENDS <========================================== */
+
 /* ===================================> FOOTER STYLES <============================== */
 
 .coolFooter {
@@ -299,7 +367,7 @@ a {
 
 .coolFooter h2 {
   margin: 0;
-  animation: heroAnimation .3s infinite;
+  animation: heroAnimation 0.3s infinite;
 }
 
 .coolFooter p {
