@@ -324,7 +324,7 @@ a {
   transform: scale(1);
 }
 
-#listaComentarios {
+.listaComentarios {
   overflow-y: scroll;
   display: flex;
   height: 100%;
