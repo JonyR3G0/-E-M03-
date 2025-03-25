@@ -138,7 +138,6 @@ a {
 }
 
 /* ===================================> HERO STYLES ENDS <=========================== */
-
 /* =====================================> NavBar STARTS <==================================== */
 .navBar {
   z-index: 900;
@@ -247,6 +246,19 @@ a {
 
   animation: blink ease-in-out both;
   animation-timeline: --section;
+}
+
+.buttonsContainer{
+  margin: 1rem;
+}
+
+.buttonPro{
+  font-size: 1.5rem;
+  background-color: var(--color-6);
+  color: var(--color-5);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
 }
 
 @keyframes containerGradientAnimation {
